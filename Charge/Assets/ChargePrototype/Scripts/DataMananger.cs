@@ -10,11 +10,11 @@ public class DataMananger : MonoBehaviour {
     public static DataMananger instance;
 
     private int m_currLevel;
-    public int CurrentLevel { set { m_currLevel = value; } }
+    public int CurrentLevel { get { return m_currLevel; } set { m_currLevel = value; } }
     private float m_time;
-    public float Time { set { m_time = value; } }
+    public float Time { get { return m_time; } set { m_time = value; } }
     private float m_totalScore;
-    public float TotalScore { set { m_totalScore = value; } }
+    public float TotalScore { get { return m_totalScore; } set { m_totalScore = value; } }
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public class DataMananger : MonoBehaviour {
     public void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+        FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
 
         PlayerData data = new PlayerData();
         data.CurrentLevel = m_currLevel;
@@ -48,7 +48,7 @@ public class DataMananger : MonoBehaviour {
         if(File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.OpenOrCreate);
+            FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
             PlayerData data = (PlayerData)bf.Deserialize(file);
             file.Close();
 
@@ -60,9 +60,7 @@ public class DataMananger : MonoBehaviour {
 
     private void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 100, 30), "Time: "  );
-        GUI.Label(new Rect(10, 10, 100, 30), "Energy: ");
-
+        GUI.Label(new Rect(10, 10, 100, 30), "Time: " + m_time );
     }
 }
 
