@@ -9,12 +9,12 @@ public class DebugScript : MonoBehaviour {
     {
         if(GUI.Button(new Rect(10, 100, 100, 30), "Time Up"))
         {
-            DataMananger.instance.Time += 10;
+            DataMananger.instance.TotalScore += 10;
         }
 
         if (GUI.Button(new Rect(10, 140, 100, 30), "Time Down"))
         {
-            DataMananger.instance.Time -= 10;
+            DataMananger.instance.TotalScore -= 10;
         }
 
         if (GUI.Button(new Rect(10, 180, 100, 30), "Save"))
