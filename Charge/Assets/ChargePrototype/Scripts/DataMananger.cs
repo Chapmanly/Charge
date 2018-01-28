@@ -9,10 +9,8 @@ public class DataMananger : MonoBehaviour {
 
     public static DataMananger instance;
 
-    private int m_currLevel;
-    public int CurrentLevel { get { return m_currLevel; } set { m_currLevel = value; } }
-    private float m_time;
-    public float Time { get { return m_time; } set { m_time = value; } }
+    private string m_currLevel;
+    public string CurrentLevel { get { return m_currLevel; } set { m_currLevel = value; } }
     private float m_totalScore;
     public float TotalScore { get { return m_totalScore; } set { m_totalScore = value; } }
 
@@ -36,7 +34,6 @@ public class DataMananger : MonoBehaviour {
 
         PlayerData data = new PlayerData();
         data.CurrentLevel = m_currLevel;
-        data.Time = m_time;
         data.TotalScore = m_totalScore;
 
         bf.Serialize(file, data);
@@ -53,21 +50,19 @@ public class DataMananger : MonoBehaviour {
             file.Close();
 
             m_currLevel = data.CurrentLevel;
-            m_time = data.Time;
             m_totalScore = data.TotalScore;
         }
     }
 
     private void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 100, 30), "Time: " + m_time );
+        GUI.Label(new Rect(10, 10, 100, 30), "Score: " + m_totalScore );
     }
 }
 
 [Serializable]
 class PlayerData
 {
-    public int CurrentLevel;
-    public float Time;
+    public string CurrentLevel;
     public float TotalScore;
 }
