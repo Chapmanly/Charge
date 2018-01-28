@@ -933,6 +933,36 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 114497352998104864, guid: 4a4b267a8b2628e4a88866b4ee495d50,
+        type: 2}
+      propertyPath: isIntersection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114497352998104864, guid: 4a4b267a8b2628e4a88866b4ee495d50,
+        type: 2}
+      propertyPath: canRight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114497352998104864, guid: 4a4b267a8b2628e4a88866b4ee495d50,
+        type: 2}
+      propertyPath: canLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114497352998104864, guid: 4a4b267a8b2628e4a88866b4ee495d50,
+        type: 2}
+      propertyPath: canUp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114497352998104864, guid: 4a4b267a8b2628e4a88866b4ee495d50,
+        type: 2}
+      propertyPath: canDown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114497352998104864, guid: 4a4b267a8b2628e4a88866b4ee495d50,
+        type: 2}
+      propertyPath: AdjoiningNodes.Array.data[0]
+      value: 
+      objectReference: {fileID: 1645573621}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a4b267a8b2628e4a88866b4ee495d50, type: 2}
   m_IsPrefabParent: 0
