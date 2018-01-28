@@ -26,7 +26,7 @@ public class NodeBehaviour : MonoBehaviour {
 
     List<Vector3> availableDirections;
 
-    float dotProductThreshold = 0.1f;
+    float dotProductThreshold = -0.2f;
 
     public bool elbow = false;
     public bool canRight = true;
@@ -39,12 +39,16 @@ public class NodeBehaviour : MonoBehaviour {
     {
         myManager = transform.parent.GetComponent<NodeManager>();
         availableDirections = GetNodeDirections();
+	}
+    void Start()
+    {
+
         if(transform.childCount > 0 && !elbow)
         {
             guide = GetComponentInChildren<ArrowGuide>();
             guide.SetArrows(canRight, canLeft, canUp, canDown);
         }
-	}
+    }
     public void ShowGuide(bool show)
     {
         if(guide != null)
@@ -127,7 +131,7 @@ public class NodeBehaviour : MonoBehaviour {
             {
                 resultDirection = availableDirections[0];
             }
-            else if(AdjoiningNodes.Count == 2)
+            else if(AdjoiningNodes.Count == 2 && !isIntersection)
             {
                 for (int i = 0; i < availableDirections.Count; i++)
                 {
