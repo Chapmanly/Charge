@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
     NodeManager nodeManager;
+    public LayerMask nodeMask;
+    [SerializeField]
+    float Speed = 2;
 
-    float Speed;
-
     [SerializeField]
-    private float MinSpeed = 0f;
+    private float MinSpeed = 2f;
     [SerializeField]
-    private float MaxSpeed = 2f;
+    private float MaxSpeed = 20f;
     [SerializeField]
-    private float accelerationRate = 0.1f;
+    private float accelerationRate = 0.055f;
     [SerializeField]
     private float decelerationPenaltyRate = .5f;
 
@@ -50,10 +51,14 @@ public class PlayerController : MonoBehaviour {
         //CompareDistance (if intersecting)
         CompareDistanceToNode();
         //GetNewDirection
-        UpdatePlayerPosition();
         //AddSpeed
 
+        UpdatePlayerPosition();
 	}
+    void FixedUpdate()
+    {
+        
+    }
 
     void ResetInputDirection()
     {
@@ -86,14 +91,19 @@ public class PlayerController : MonoBehaviour {
             intersecting = true;
             Debug.Log("We have entered " + targetNode.name);
         }
+
+        if(other.tag == "Short")
+        {
+
+        }
     }
     void OnTriggerExit(Collider other)
     {
-       /* if(other.tag == "Node")
+        if(other.tag == "Node")
         {
             intersecting = false;
         }
-        */
+        
     }
 
 
@@ -109,6 +119,7 @@ public class PlayerController : MonoBehaviour {
         {
             if (Vector3.Distance(transform.position, TargetPosition) < nodeDistanceThreshold)
             {
+                targetNode.ShowGuide(true);
                 AquireDirection(targetNode);
                 transform.position = TargetPosition;
                 moveDirection = DesiredDirection;
@@ -127,6 +138,7 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
+                targetNode.ShowGuide(false);
                 arrived = false;
                 intersecting = false;
             }
@@ -136,17 +148,44 @@ public class PlayerController : MonoBehaviour {
 
     void UpdatePlayerPosition()
     {
-        //This really only needs to do something when we hit an intersection
+        //This really only needs to do something between an intersection
         //Maybe Compare it against move direction.
 
         updateSpeed();
 
-        transform.position += moveDirection.normalized * Speed * Time.deltaTime;
+        transform.position += moveDirection.normalized * Speed * Time.fixedDeltaTime;
+        /*if (targetNode != null && !VerifyNode())
+        {
+            transform.position = TargetPosition;
+        }*/
 
+    }
+    bool VerifyNode()
+    {
+        RaycastHit hitinfo;
+        if (Physics.Raycast(transform.position, moveDirection.normalized, out hitinfo, 30f, nodeMask))
+        {
+            if(hitinfo.transform.tag == "node")
+            {
+                return true;
+            }
+        }
+        return false;
     }
     void updateSpeed()
     {
-        if (Speed > MaxSpeed) Speed = MaxSpeed;
-        Speed += accelerationRate;
+        if (!intersecting)
+        {
+            Speed = Mathf.MoveTowards(Speed, MaxSpeed, accelerationRate);
+            Speed = Mathf.Clamp(Speed,MinSpeed, MaxSpeed);
+
+        }
+    }
+  
+
+
+    void TallyEnergyValue()
+    {
+
     }
 }
