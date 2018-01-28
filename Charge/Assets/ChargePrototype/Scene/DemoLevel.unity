@@ -185,6 +185,16 @@ Prefab:
       propertyPath: canLeft
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: elbow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: canDown
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbadc3d0d63433a46a440e35a92e726d, type: 2}
   m_IsPrefabParent: 0
@@ -253,7 +263,7 @@ Prefab:
     - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
         type: 2}
       propertyPath: canUp
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
         type: 2}
@@ -269,6 +279,11 @@ Prefab:
         type: 2}
       propertyPath: canDown
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: elbow
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbadc3d0d63433a46a440e35a92e726d, type: 2}
@@ -871,6 +886,11 @@ Prefab:
       propertyPath: canDown
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114960594890116288, guid: eb4c99a002d79bf41958d91560fd5298,
+        type: 2}
+      propertyPath: canRight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb4c99a002d79bf41958d91560fd5298, type: 2}
   m_IsPrefabParent: 0
@@ -988,6 +1008,16 @@ Prefab:
       propertyPath: canUp
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: elbow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: canRight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbadc3d0d63433a46a440e35a92e726d, type: 2}
   m_IsPrefabParent: 0
@@ -1055,7 +1085,7 @@ Prefab:
       objectReference: {fileID: 486498967}
     - target: {fileID: 4863740716272776, guid: 94b7d4405c2901c49969d52b924ccf5f, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4812071175938764, guid: 94b7d4405c2901c49969d52b924ccf5f, type: 2}
       propertyPath: m_RootOrder
@@ -1509,6 +1539,16 @@ Prefab:
       propertyPath: canLeft
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: elbow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: canRight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbadc3d0d63433a46a440e35a92e726d, type: 2}
   m_IsPrefabParent: 0
@@ -1703,7 +1743,7 @@ Prefab:
     - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
         type: 2}
       propertyPath: canUp
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
         type: 2}
@@ -1714,6 +1754,11 @@ Prefab:
         type: 2}
       propertyPath: canLeft
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: elbow
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbadc3d0d63433a46a440e35a92e726d, type: 2}
@@ -1756,6 +1801,26 @@ Prefab:
     - target: {fileID: 4612005997882568, guid: 08924f5e18e6b1e479a4e9377a2cf1b9, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114411450637346192, guid: 08924f5e18e6b1e479a4e9377a2cf1b9,
+        type: 2}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114411450637346192, guid: 08924f5e18e6b1e479a4e9377a2cf1b9,
+        type: 2}
+      propertyPath: MinSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114411450637346192, guid: 08924f5e18e6b1e479a4e9377a2cf1b9,
+        type: 2}
+      propertyPath: MaxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114411450637346192, guid: 08924f5e18e6b1e479a4e9377a2cf1b9,
+        type: 2}
+      propertyPath: accelerationRate
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08924f5e18e6b1e479a4e9377a2cf1b9, type: 2}
@@ -1832,6 +1897,21 @@ Prefab:
       propertyPath: canRight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: elbow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: canUp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: canDown
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbadc3d0d63433a46a440e35a92e726d, type: 2}
   m_IsPrefabParent: 0
@@ -1901,6 +1981,21 @@ Prefab:
         type: 2}
       propertyPath: canDown
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: canRight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: canLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114784210499210580, guid: dbadc3d0d63433a46a440e35a92e726d,
+        type: 2}
+      propertyPath: elbow
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbadc3d0d63433a46a440e35a92e726d, type: 2}
